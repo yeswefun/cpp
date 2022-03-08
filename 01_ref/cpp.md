@@ -9,7 +9,7 @@ void test01() {
     //int &a;
 }
 
-// 引用变量初始化后，不能再作为其它变量的别名?
+// 引用变量初始化后，不能再作为其它变量的引用
 void test02() {
     int a = 10;
     int &b = a;
@@ -28,7 +28,7 @@ void test02() {
 void test00() {
     // error: cannot bind non-const lvalue reference of type ‘int&’ to an rvalue of type ‘int’
     //int &a = 10;     // err
-    const int &a = 10; // ok, why? 都是常量
+    const int &a = 10; // ok, 都是常量
 }
 
 

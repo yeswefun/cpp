@@ -29,7 +29,7 @@ int main() {
 
     // 自动类型推导，必须是编译器能找到匹配的调用类型
     // error: no matching function for call to ‘xswap(int, char)’
-    // xswap(10, 'c');
+    // xswap(10, 'c'); // 'c'不会作类型转换
 
     return 0;
 }
@@ -61,6 +61,16 @@ int main() {
 
     4.若函数模板的匹配度高，则优先使用函数模板
 
+        template<class A, class B>
+        void test(A &a, B &b) {
+
+        }
+
+        void test(int a, int b) {
+
+        }
+
+        test(10, 'c');
 
 
 编译器依据函数模板生成不同的模板函数
@@ -81,7 +91,7 @@ void test(int a) {
 }
 
 //test(3.14); 编译器生成以下函数 - 模板函数
-void test(float a) {
+void test(double a) {
     cout << "template" << endl;
 }
 ```
@@ -90,7 +100,7 @@ void test(float a) {
 
 函数模板 - 局限性
     无法对任何类型进行比较之类的操作
-
+    全局函数 -> 类中的比较运算符
 
 
 07.cpp

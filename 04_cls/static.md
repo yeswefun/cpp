@@ -46,8 +46,8 @@ this指针指向NULL
 
 
 const Dog * const this; // 只读指针
-this = NULL; // error，指向不能改变-指针常量
-*this = NULL;// error，指向的变量也不能改变-常量指针
+this = NULL; // error，指向不能改变-指针常量，指针类型的常量
+*this = NULL;// error，指向的变量也不能改变-常量指针，指向常量的指针
 
 
 常函数
@@ -101,9 +101,3 @@ this = NULL; // error，指向不能改变-指针常量
         class Safe {
             friend void User::test();
         }
-
-
-
-
-
-

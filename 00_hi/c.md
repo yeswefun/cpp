@@ -167,7 +167,6 @@ void test01() {
 
 
 ```c
-// c
 void test02() {
     // error: variable-sized object may not be initialized
     const int size = 2;
@@ -180,7 +179,6 @@ void test02() {
 
 
 ```cpp
-// cpp
 void test02() {
     const int size = 2;
     int arr[size] = {0, 1}; 
@@ -306,5 +304,3 @@ void test02() {
 类型 / 作用域
 在c++中const修饰的变量一般是无法改变的
 ```
-
-
